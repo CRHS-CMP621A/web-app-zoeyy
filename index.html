@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fast food app</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- desktop view -->
+    <h1 id="header" class="cl-header">Fast food restaurant <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU46foGF1i34_NIdfHATUPxE0vq6pq80Cwzw&usqp=CAU"
+            height="100" weight="100"></h1>
+
+    <h2 id="intro" class="cl-intro">Welcome to our restaurant. In here, we have French fries, coke, burger, etc. You can
+        order it at home and come to ourstore and pick them up.</h2>
+    <div class="container" id="container">
+        <div id="menu">
+            <div class="title">
+
+            </div>
+            <div class="menu-item">
+                <button id="checkout" class="cl-checkout" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+
+        <i class="cl-cart-plus" id="cart-plus"><span class="numb">0</span> Items</i>
+
+    </div>
+    </div>
+    <div id="food-items" class="cl-food-items">
+        <div id="chicken" class="cl-chicken">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-qiH9nSO98YsaATmtGaQ8VKAryEoS0EDdpQ&usqp=CAU"
+                height="150" width="250"><br>
+            <button onClick="addchicken()" id="category-name">Fried Chicken </button> $7
+        </div>
+        <div id="fries" class="cl-fries">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSToZck32jdTQRG_8lnDnXsKgBLTFB-w4vZVA&usqp=CAU"
+                height="150" width="250"><br>
+            <button onClick="addfries()" id="category-name">French fries </button> $2.5
+        </div>
+        <div id="drinks" class="cl-drinks">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCqKx6GUZtMHVAGfMqkSFiWX9Jzi-7poN_Nw&usqp=CAU"
+                height="150" width="250"><br>
+            <button onClick="addcoke()" id="category-name">Coke</button> $2
+        </div>
+        <div id="order" class="cl-order">Your order<br> 
+            Coke----- >   x<span id="cokenumb">0</span> <br>
+            Chicken----- >x<span id="chickennumb">0</span><br>
+            Fries----- >   x<span id="friesnumb">0</span><br>
+            Burger----- >  x<span id="burgernumb"> 0</span><br>
+            Pizza----- >   x<span id="Pizzanumb">0</span><br>
+            Juice----- >   x<span id="juicenumb">0</span><br>
+            Salad----- > x<span id="saladnumb">0</span><br>
+            Chicken nuggets-- >  x <span id="nuggetsnumb">0</span><br>
+            Poutine----- >  x<span id="poutinenumb">0</span><br>
+            Hotdog----- >  x<span id="hotdogsnumb"> 0</span><br>
+            
+
+
+
+        </div>
+
+        <div id="burgers" class="cl-burgers">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3USADAxII0HgpfDsrYyKbe0P0JcKEFPvHFw&usqp=CAU"
+                height="150" width="250"><br>
+            <button onClick="addburgers()" id="category-name">Beef Burgers</button> $7
+        </div>
+        <div id="pizzas" class="cl-pizzas">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqmlFvECM6TF1IXEbxLlHXUd2mLoHX8b_tcA&usqp=CAU"
+                height="150" width="250"><br>
+            <button onClick="addpizzas()" id="category-name">Hawaiian Pizzas</button> $5
+        </div>
+        <div id="hotdogs" class="cl-hotdogs">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm6t6Ap_rq19HzyGwHiFXW06DR01GiZNI0eA&usqp=CAU"
+                height="150" width="250"><br>
+            <button onClick="addhotdogs()" id="category-name">Hotdogs</button> $2
+        </div>
+        <div id="chicken nuggets" class="cl-chicken nuggets">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjY6kkj9J8j44zmKIWiGHEpPOyZvysLCSTmQ&usqp=CAU"
+                height="200" width="250"><br>
+            <button onClick="addnuggets()" id="category-name">chicken nuggets</button> $4
+        </div>
+        <div id="salad" class="cl-salad">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX1ha9HNgt0PJbqM4QfRlafGONQHmOxHxdAQ&usqp=CAU"
+                height="200" width="250"><br>
+            <button onClick="addsalad()" id="category-name">salad</button> $4.5
+        </div>
+        <div id="orange juice" class="cl-juice">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXhVjVCSAsRA6AHkXV7grZK3Oz0a-RhJjj-Q&usqp=CAU"
+                height="150" width="250"><br>
+            <button onClick="addjuice()" id="category-name">orange juice</button> $2.5
+        </div>
+        <div id="poutine" class="cl-poutine">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiyqy0EhrcWrRR0QIBOTL3JLAga6RUEGjpTA&usqp=CAU"
+                height="200" width="250"><br>
+            <button onClick="addpoutine()" id="category-name">poutine</button> $5
+        </div>
+
+
+    </div>
+    <script src="script.js" defer=""></script>
+</body>
+
+</html>
