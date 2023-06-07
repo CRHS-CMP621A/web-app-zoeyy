@@ -26,7 +26,7 @@ burgernumb = localStorage.getItem('burgers')
 document.querySelector("#burgernumb").textContent =burgernumb;
 
 Pizzanumb = localStorage.getItem('pizzas')
-document.querySelector("#pizzanumb").textContent =Pizzanumb;
+document.querySelector("#Pizzanumb").textContent =Pizzanumb;
 
 juicenumb = localStorage.getItem('juice')
 document.querySelector("#juicenumb").textContent =juicenumb;
@@ -53,6 +53,7 @@ function addchicken(){
    itemsobj.textContent= items;
    document.querySelector("#chickennumb").textContent =chickennumb;
    localStorage.setItem('chicken',chickennumb)
+   //localStorage.setItem('items', items)
  
 };
 
@@ -100,7 +101,7 @@ function addpizzas(){
   items +=1;
   itemsobj.textContent= items;
   document.querySelector("#Pizzanumb").textContent =Pizzanumb;
-  localStorage.setItem('pizza',Pizzanumb)
+  localStorage.setItem('pizzas',Pizzanumb)
 
 };
 
@@ -111,7 +112,7 @@ function addjuice(){
   items +=1;
   itemsobj.textContent= items;
   document.querySelector("#juicenumb").textContent =juicenumb;
-  localStorage.setItem('organge juice',juicenumb)
+  localStorage.setItem('juice',juicenumb)
   
 
 };
@@ -159,16 +160,16 @@ function addnuggets(){
   items +=1;
   itemsobj.textContent= items;
   document.querySelector("#nuggetsnumb").textContent =nuggetsnumb;
-  localStorage.setItem('chicken nuggets',nuggetsnumb)
+  localStorage.setItem('nuggets',nuggetsnumb)
   
   
 };
 
 
  function checkout(){
-  let sum = price1 +price2+price3+price4+price5+price+price6+price7+price8+price9;
-  let sub =sum+sum*0.15;
-  alert(`Your subtotal is $ ${sub}`);
+ // let sum = price1 + price2+ price3 + price4+price5+price+price6+price7+price8+price9;
+  //let sub =sum+sum*0.15;
+  //alert(`Your subtotal is $ ${sum} `);
   alert(`Your order is completed. You have order ${items} items. Come to our restaurant to pick it up and pay in there.`)
   
  };
